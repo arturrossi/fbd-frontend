@@ -1,0 +1,58 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+	<script src="index.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<Title>Estatísticas de futebol</Title>
+</head>
+
+<body
+	style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+	<main style="margin-left: 40px; margin-top: 80px;">
+
+		<h1 style="align-self: center;">ESTATÍSTICAS DE FUTEBOL</h1>
+		<h2 style="align-self: center;">TABELA</h2>
+		<div id="table">
+		</div>
+		<h2 style="align-self: center;">Goleiros</h2>
+		<p>Obtenha as informações de todos os goleiros de altura de no mínimo (em cm):</p>
+		<div style="display: flex; max-height: 30px;">
+			<input id="altura" style="width: 100px; margin-right: 30px;"></input>
+			<input type="button" value="Buscar" id="btn-altura"></input>
+			<span id="error-altura" style="opacity: 0; color: red; margin-left: 30px;">Não foram encontrados resultados para
+				sua pesquisa.</span>
+		</div>
+		<div style="margin-top: 30px;" id="goleiros">
+
+		</div>
+		<h2 style="align-self: center;">Vitórias</h2>
+		<p>Obtenha as partidas em que o time ganhou:</p>
+		<div style="display: flex; max-height: 30px;">
+			<input id="time" style="width: 100px; margin-right: 30px;"></input>
+			<input type="button" value="Buscar" id="btn-time"></input>
+			<span id="error-time" style="opacity: 0; color: red; margin-left: 30px;">Não foram encontrados resultados para
+				sua pesquisa.</span>
+		</div>
+		<div style="margin-top: 30px;" id="partidas">
+		</div>
+		<div>
+			<h2 style="align-self: center;">Partidas restantes</h2>
+			<p>Obtenha as partidas restantes do time:</p>
+			<div style="display: flex; max-height: 30px;">
+				<input id="time-restante" style="width: 100px; margin-right: 30px;"></input>
+				<input type="button" value="Buscar" id="btn-restante"></input>
+				<span id="error-time-restantes" style="opacity: 0; color: red; margin-left: 30px;">Não foram encontrados
+					resultados para
+					sua pesquisa.</span>
+			</div>
+			<div style="margin-top: 30px;" id="partidas-restantes">
+			</div>
+			<div>
+			</div>
+
+	</main>
+
+</body>
+
+</html>
