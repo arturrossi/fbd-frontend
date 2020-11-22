@@ -112,5 +112,200 @@ window.onload = () => {
 		}
 	})
 
+	document.getElementById('btn-estadio').addEventListener("click", async () => {
+
+		const data = await fetch("http://localhost:8000/infos/estadios", {
+		})
+		console.log(data);
+		const dataJson = await data.json()
+		console.log(dataJson);
+		let list = `
+		<table>
+		<tr>`
+		for(var key in dataJson["data"][0]){
+			console.log(key);
+			list += "<th>"+key+"</th>"
+		}
+		
+		list += "</tr>"
+		console.log(list);
+		if (dataJson.data.length) {
+			for(var item in dataJson["data"]){
+				list += "<tr>"
+				for(var key in dataJson["data"][item]){
+					list += "<td>"+dataJson["data"][item][key]+"</th>"
+				}
+				list += "</tr>"
+			}
+			document.querySelector('#Estadios').innerHTML = list + '</table>'
+			document.querySelector('#Estadios').style.display = "block"
+		} else {
+			document.querySelector('#Estadios').style.display = "none"
+		}
+	})
+
+	document.getElementById('btn-vencedores').addEventListener("click", async () => {
+
+		const data = await fetch("http://localhost:8000/infos/vencedores", {
+		})
+		console.log(data);
+		const dataJson = await data.json()
+		console.log(dataJson);
+		let list = `
+		<table>
+		<tr>`
+		for(var key in dataJson["data"][0]){
+			console.log(key);
+			list += "<th>"+key+"</th>"
+		}
+		
+		list += "</tr>"
+		console.log(list);
+		if (dataJson.data.length) {
+			for(var item in dataJson["data"]){
+				list += "<tr>"
+				for(var key in dataJson["data"][item]){
+					list += "<td>"+dataJson["data"][item][key]+"</th>"
+				}
+				list += "</tr>"
+			}
+			document.querySelector('#Vencedores').innerHTML = list + '</table>'
+			document.querySelector('#Vencedores').style.display = "block"
+		} else {
+			document.querySelector('#Vencedores').style.display = "none"
+		}
+	})
+
+	document.getElementById('btn-arbitros').addEventListener("click", async () => {
+
+		const data = await fetch("http://localhost:8000/infos/arbitro", {
+		})
+		console.log(data);
+		const dataJson = await data.json()
+		console.log(dataJson);
+		let list = `
+		<table>
+		<tr>`
+		for(var key in dataJson["data"][0]){
+			console.log(key);
+			list += "<th>"+key+"</th>"
+		}
+		
+		list += "</tr>"
+		console.log(list);
+		if (dataJson.data.length) {
+			for(var item in dataJson["data"]){
+				list += "<tr>"
+				for(var key in dataJson["data"][item]){
+					list += "<td>"+dataJson["data"][item][key]+"</th>"
+				}
+				list += "</tr>"
+			}
+			document.querySelector('#Arbitros').innerHTML = list + '</table>'
+			document.querySelector('#Arbitros').style.display = "block"
+		} else {
+			document.querySelector('#Arbitros').style.display = "none"
+		}
+	})
+
+	document.getElementById('btn-jogadores_wins').addEventListener("click", async () => {
+
+		const data = await fetch("http://localhost:8000/infos/jogadores_wins", {
+		})
+		console.log(data);
+		const dataJson = await data.json()
+		console.log(dataJson);
+		let list = `
+		<table>
+		<tr>`
+		for(var key in dataJson["data"][0]){
+			console.log(key);
+			list += "<th>"+key+"</th>"
+		}
+		
+		list += "</tr>"
+		console.log(list);
+		if (dataJson.data.length) {
+			for(var item in dataJson["data"]){
+				list += "<tr>"
+				for(var key in dataJson["data"][item]){
+					list += "<td>"+dataJson["data"][item][key]+"</th>"
+				}
+				list += "</tr>"
+			}
+			document.querySelector('#Jogadores_wins').innerHTML = list + '</table>'
+			document.querySelector('#Jogadores_wins').style.display = "block"
+		} else {
+			document.querySelector('#Jogadores_wins').style.display = "none"
+		}
+	})
+
+	document.getElementById('btn-tecnicos').addEventListener("click", async () => {
+
+		const data = await fetch("http://localhost:8000/infos/tecnicos", {
+		})
+		console.log(data);
+		const dataJson = await data.json()
+		console.log(dataJson);
+		let list = `
+		<table>
+		<tr>`
+		for(var key in dataJson["data"][0]){
+			console.log(key);
+			list += "<th>"+key+"</th>"
+		}
+		
+		list += "</tr>"
+		console.log(list);
+		if (dataJson.data.length) {
+			for(var item in dataJson["data"]){
+				list += "<tr>"
+				for(var key in dataJson["data"][item]){
+					list += "<td>"+dataJson["data"][item][key]+"</th>"
+				}
+				list += "</tr>"
+			}
+			document.querySelector('#Tecnicos').innerHTML = list + '</table>'
+			document.querySelector('#Tecnicos').style.display = "block"
+		} else {
+			document.querySelector('#Tecnicos').style.display = "none"
+		}
+	})
+
+	document.getElementById('btn-time_campeonato').addEventListener("click", async () => {
+
+		const data = await fetch("http://localhost:8000/infos/times_wins", {
+		})
+		console.log(data);
+		const dataJson = await data.json()
+		console.log(dataJson);
+		let list = `
+		<table>
+		<tr>`
+		for(var key in dataJson["data"][0]){
+			console.log(key);
+			list += "<th>"+key+"</th>"
+		}
+		
+		list += "</tr>"
+		console.log(list);
+		if (dataJson.data.length) {
+			for(var item in dataJson["data"]){
+				list += "<tr>"
+				for(var key in dataJson["data"][item]){
+					list += "<td>"+dataJson["data"][item][key]+"</th>"
+				}
+				list += "</tr>"
+			}
+			document.querySelector('#time_campeonato').innerHTML = list + '</table>'
+			document.querySelector('#time_campeonato').style.display = "block"
+		} else {
+			document.querySelector('#time_campeonato').style.display = "none"
+		}
+	})
+
+
+
+
 	fetchTabela()
 }
